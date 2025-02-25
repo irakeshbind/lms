@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 
 
 function Login() {
@@ -7,7 +7,8 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const submitHandler = () => {
+    const submitHandler = (e) => {
+        e.preventDefault()
         console.log(email, password);
     }
 
@@ -19,12 +20,13 @@ function Login() {
                     <h1>SBS Online Classes</h1>
                     <p>Learn Coding in Easy Way..</p>
                 </div>
-                <div className="signup-right-box">
+                <form onSubmit={submitHandler} className="signup-right-box">
                     <h2>Login with Your Account</h2>
                     <input onChange={(e) => { setEmail(e.target.value) }} type='email' placeholder='Email' />
                     <input onChange={(e) => { setPassword(e.target.value) }} type='password' placeholder='Password' />
-                    <button onClick={submitHandler} className='submit-btn' type='submit'>submit</button>
-                </div>
+                    <button className='submit-btn' type='submit'>submit</button>
+                    <Link to='/signup' className='link'>i dont account</Link>
+                </form>
 
 
             </div>

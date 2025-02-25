@@ -94,3 +94,7 @@
 #input-file{
     display: none;
 }
+.link{
+    color:white;
+    text-decoration: none;
+}
