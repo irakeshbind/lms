@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 const Dashboard = () => {
+    const location = useLocation()
     return (
         <div className="dashboard-wrapper">
             <div className="side-nav">
@@ -12,9 +13,10 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className="menu">
-                    <Link to='/dashboard/home' className="menu-link">Home</Link>
-                    <Link to='/dashboard/my-courses' className="menu-link">My Courses</Link>
-                    <Link tp='/dashboard/add-course' className="menu-link">Add New Course</Link>
+                    <Link to='/dashboard/home' className={location.pathname === '/dashboard/home' ? 'menu-active-link' : 'menu-link'}>Home</Link>
+                    <Link to='/dashboard/my-courses' className={location.pathname === '/dashboard/my-courses' ? 'menu-active-link' : 'menu-link'}>My Courses</Link>
+                    <Link to='/dashboard/add-course' className={location.pathname === '/dashboard/add-course' ? 'menu-active-link' : 'menu-link'}>Add New Course</Link>
+                  
                 </div>
             </div>
             <div className="main-content">

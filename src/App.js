@@ -4,8 +4,9 @@ import './style.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Home from './components/Home';
-import AddCourse from './components/AddCourse';
+
 import MyCourses from './components/MyCourses';
+import AddCourse from './components/AddCourse';
 
 const myRouter = createBrowserRouter([
   {path:'/login',Component:Login},
@@ -13,8 +14,10 @@ const myRouter = createBrowserRouter([
   {path:'/dashboard',Component:Dashboard,children:[
     {path:'home',Component:Home},
     {path:'my-courses',Component:MyCourses},
-    {path:'add-course',Component:AddCourse},
-  ]},
+    {path:'add-course',Component:AddCourse}
+    
+   
+  ]}
 
  
 ])
