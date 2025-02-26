@@ -12,6 +12,7 @@ const myRouter = createBrowserRouter([
   {path:'/login',Component:Login},
   {path:'/signup',Component:Signup},
   {path:'/dashboard',Component:Dashboard,children:[
+    {path:'',Component:Home},
     {path:'home',Component:Home},
     {path:'my-courses',Component:MyCourses},
     {path:'add-course',Component:AddCourse}
