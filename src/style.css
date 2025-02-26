@@ -216,7 +216,7 @@
      border-radius: 5px;
 
 }
-.add-course-form  button{
+.add-course-button{
     padding: 10px;
     font-size: 13px;
     border: none;
@@ -224,4 +224,18 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* react quill */
+/* .ql-container{
+    border-radius: 5px !important;
+}
+.ql-toolbar{
+    border-radius: 5px;
+} */
+/* ============ */
+
+
+#input-thumb{
+    display: none;
 }
