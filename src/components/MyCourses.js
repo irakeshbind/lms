@@ -79,7 +79,7 @@ const MyCourses =()=>{
           {
             courses.map((course)=>{
                 return(
-                    <div onClick={()=>{navigate('/dashboard/course-detail/'+course.id)}} key={course.div} className="course-box">
+                    <div onClick={()=>{navigate('/dashboard/course-detail/'+course.id,{state:course})}} key={course.div} className="course-box">
                         <img alt="thumbnail" src={course.thumbnail}/>
                         <h2>{course.courseName}</h2>
                         <p>RS. {(course.price*(100-course.discount))/100} <span className="discount-text">{course.discount}% off</span></p>

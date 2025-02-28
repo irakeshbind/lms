@@ -284,9 +284,10 @@
      margin-bottom: 10px;
 }
 .discount-text{
-    background-color: yellow;
+    background-color: rgb(238, 10, 143);
     padding: 5x;
     border-radius: 5px;
+    color: white;
 }
 .course-box:hover{
     scale: 1.1;
