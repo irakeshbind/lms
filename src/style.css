@@ -320,7 +320,9 @@
     width: 90%;
     padding: 10px;
     border: none;
-    background-color: rgb(129, 7, 153)
+    background-color:#ed1397  ;
+    color: white;
+    border-radius: 5px;
 
 }
 .cd-thumbnail{
@@ -344,4 +346,23 @@
 }
 .cd-delete-btn{
      background-color: red;
+}
+
+.cd-detail-box{
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    overflow: scroll;
+}
+.cd-description-heading{
+    color:#333;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.cd-description{
+     padding-left: 50px;
+     font-size: 14px;
 }

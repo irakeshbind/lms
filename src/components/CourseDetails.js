@@ -17,10 +17,15 @@ const CourseDetails = () => {
                     </div>
                 </div>
                 <div className="cd-header-right">
-                    <img className="cd-thumbnail" src={location.state.thumbnail}/>
+                    <img alt='thumnail' className="cd-thumbnail" src={location.state.thumbnail} />
+                    {/* <p>RS. {(location.state.price * (100 - location.state.discount)) / 100} <span className="discount-text">{location.state.discount}% off</span></p> */}
                     <button>Manage Content</button>
                 </div>
 
+            </div >
+            <div className="cd-detail-box">
+               <h3 className="cd-description-heading">Course description</h3>
+               <div className="cd-description" dangerouslySetInnerHTML={{__html:location.state.description}}></div>
             </div>
         </div>
     )
