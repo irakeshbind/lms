@@ -272,6 +272,7 @@
     overflow: hidden;
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 .course-box img{
     width: 100%;
@@ -286,4 +287,8 @@
     background-color: yellow;
     padding: 5x;
     border-radius: 5px;
+}
+.course-box:hover{
+    scale: 1.1;
+    transition: 0.8s;
 }

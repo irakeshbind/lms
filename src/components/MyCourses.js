@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom"
+
 const MyCourses =()=>{
+    const navigate = useNavigate();
     const courses = [
         {
             id:0,
             courseName:'c++ master course',
-            price:5999,
+            price:500,
             discount:20,
             thumbnail:'https://gogetgpt.com/files/img/1beb834ea28aa4d66bfd3852aea26c51.png'
         },
@@ -76,10 +79,10 @@ const MyCourses =()=>{
           {
             courses.map((course)=>{
                 return(
-                    <div className="course-box">
+                    <div onClick={()=>{navigate('/dashboard/course-detail/'+course.id)}} key={course.div} className="course-box">
                         <img alt="thumbnail" src={course.thumbnail}/>
                         <h2>{course.courseName}</h2>
-                        <p>RS . {course.price} <span className="discount-text">{course.discount}% off</span></p>
+                        <p>RS. {(course.price*(100-course.discount))/100} <span className="discount-text">{course.discount}% off</span></p>
                   </div>
                 )
             })
