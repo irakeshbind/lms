@@ -293,3 +293,55 @@
     scale: 1.1;
     transition: 0.8s;
 }
+/* -------course details---------- */
+.course-detail-wrapper{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+    padding: 10px;
+}
+.cd-heading{
+   color: #333; 
+}
+.cd-header{
+    width: 100%;
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.cd-header-left{
+    width: 70%;
+}
+.cd-header-right{
+    width: 30%;
+}
+.cd-header-right button{
+    width: 90%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(129, 7, 153)
+
+}
+.cd-thumbnail{
+    width: 90%;
+    border-radius: 5px;
+}
+.cd-header-btn-box{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.cd-header-btn-box button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+.cd-edit-btn{
+  background-color: rebeccapurple;
+}
+.cd-delete-btn{
+     background-color: red;
+}
