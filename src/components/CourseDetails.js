@@ -1,10 +1,11 @@
-import { useLocation, useParams } from "react-router-dom"
+import { useLocation, useNavigate, useParams } from "react-router-dom"
 
 const CourseDetails = () => {
     const { id } = useParams();
     console.log(id)
     const location = useLocation()
     console.log(location.state)
+    const navigate = useNavigate();
     return (
         <div className="course-detail-wrapper">
             <div className="cd-header">
@@ -29,7 +30,7 @@ const CourseDetails = () => {
                 <div className="cd-header-right">
                     <img alt='thumnail' className="cd-thumbnail" src={location.state.thumbnail} />
                     {/* <p>RS. {(location.state.price * (100 - location.state.discount)) / 100} <span className="discount-text">{location.state.discount}% off</span></p> */}
-                    <button>Manage Content</button>
+                    <button onClick={()=>{navigate('/dashboard/content/'+id)}}>Manage Content</button>
                 </div>
 
             </div >
