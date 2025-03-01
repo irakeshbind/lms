@@ -301,7 +301,7 @@
     padding: 10px;
 }
 .cd-heading{
-   color: #333; 
+   color: #7e7a7a; 
 }
 .cd-header{
     width: 100%;
@@ -358,11 +358,23 @@
     overflow: scroll;
 }
 .cd-description-heading{
-    color:#333;
+    color:#3d3939;
     margin-bottom: 10px;
     font-size: 15px;
 }
 .cd-description{
      padding-left: 50px;
      font-size: 14px;
+}
+.price-detail-box{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    gap:10%;
+    margin-top: 20px;
+}
+.price-discount{
+    background-color: white;
+    width: 25%;
+    padding: 10px;
 }

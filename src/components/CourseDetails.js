@@ -15,6 +15,16 @@ const CourseDetails = () => {
                         <button className="cd-edit-btn">Edit coursee</button>
                         <button className="cd-delete-btn">Delete course</button>
                     </div>
+                    <div className="price-detail-box">
+                    <div className="price-discount">
+                        <p>Price</p>
+                        <h2>Rs.{location.state.price}</h2>
+                    </div>
+                    <div className="price-discount">
+                    <p>Discount</p>
+                    <h2>{location.state.discount}%</h2>
+                    </div>
+                    </div>
                 </div>
                 <div className="cd-header-right">
                     <img alt='thumnail' className="cd-thumbnail" src={location.state.thumbnail} />
