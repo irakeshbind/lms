@@ -1,4 +1,7 @@
+import { useState } from "react"
+
 const Content =()=>{
+    const [isvisible,setVisible] = useState(false)
     const content =[
         {
             id:1,
@@ -35,18 +38,20 @@ const Content =()=>{
        <div className="content-wrapper">
         <div className="content-header">
             <h1>MERN Stack Development</h1>
-            <button>Upload Content</button>
+           {!isvisible && <button onClick={()=>{setVisible(true)}}>Upload Content</button>}
+
         </div>
         
-             <form  className="upload-contant-form">
+           {isvisible &&  <form  className="upload-contant-form">
                 <input type='text' placeholder="video Title"/>
                 <textarea style={{padding:10,border:'1px solid #eee'}} placeholder="Description"></textarea>
                 <input type='file'/>
                 <div className="upload-contant-btn-box">
                 <button style={{backgroundColor:'royalblue'}} className="upload-button" type='button'>submit</button>
-                <button style={{backgroundColor:'red'}} className="close-button" type='button'>Close</button>
+                <button onClick={()=>{setVisible(false)}} style={{backgroundColor:'red'}} className="close-button" type='button'>Close</button>
                 </div>
              </form>
+}
       
 
         <div className="content-box">
