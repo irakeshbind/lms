@@ -9,6 +9,7 @@ import MyCourses from './components/MyCourses';
 import AddCourse from './components/AddCourse';
 import CourseDetails from './components/CourseDetails';
 import Content from './components/Content';
+import CourseStudent from './components/CourseStudent';
 
 const myRouter = createBrowserRouter([
   {path:'/login',Component:Login},
@@ -19,7 +20,8 @@ const myRouter = createBrowserRouter([
     {path:'my-courses',Component:MyCourses},
     {path:'add-course',Component:AddCourse},
     {path:'course-detail/:id',Component:CourseDetails},
-    {path:'content/:id',Component:Content}
+    {path:'content/:id',Component:Content},
+    {path:'student-list/:id',Component:CourseStudent}
     
    
   ]}

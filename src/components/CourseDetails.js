@@ -15,7 +15,7 @@ const CourseDetails = () => {
                     <div className="cd-header-btn-box">
                         <button className="cd-edit-btn">Edit coursee</button>
                         <button className="cd-delete-btn">Delete course</button>
-                        <button className="cd-view-btn">View All Students</button>
+                        <button onClick={()=>{navigate('/dashboard/student-list/'+id)}} className="cd-view-btn">View All Students</button>
                     </div>
                     <div className="price-detail-box">
                     <div className="price-discount">
