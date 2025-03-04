@@ -21,7 +21,8 @@ const myRouter = createBrowserRouter([
     {path:'add-course',Component:AddCourse},
     {path:'course-detail/:id',Component:CourseDetails},
     {path:'content/:id',Component:Content},
-    {path:'student-list/:id',Component:CourseStudent}
+    {path:'student-list/:id',Component:CourseStudent},
+    // {path:'student-profile/:studentId',Component:CourseStudent}
     
    
   ]}
