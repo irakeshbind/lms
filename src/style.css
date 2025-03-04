@@ -461,8 +461,67 @@
     border: none;
     outline: none;
     border-radius: 5px;
+    /* color: white; */
+
     
 }
 .cd-view-btn{
     background-color: rgb(19, 17, 165);
+}
+
+/* ---------student list----------- */
+
+.sl-wrapper{
+    width: 100%;
+    height: 100vh;
+    
+}
+.sl-search{
+    width: 100%;
+    padding: 10px;
+    border: 1px  solid #eee;
+    border-radius: 5px;
+
+}
+.sl-box{
+    /* background-color: red; */
+    margin-top: 10px;
+    height: 70vh;
+    overflow-y: scroll;
+   
+
+}
+table{
+    width: 100%;
+    /* background-color: green; */
+}
+th{
+    text-align: left;
+}
+tr:hover{
+    cursor: pointer;
+    background-color: white;
+    transition:0.5s;
+}
+th,td{
+    /* background-color: red; */
+    padding: 20px;
+}
+.sl-box img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+thead{
+    background-color: rgb(21, 13, 56);
+    color: white;
+
+}
+.sl-box button{
+    border: none;
+    outline: none;
+    background-color: rgb(209, 15, 96);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
 }
