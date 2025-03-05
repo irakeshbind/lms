@@ -10,6 +10,7 @@ import AddCourse from './components/AddCourse';
 import CourseDetails from './components/CourseDetails';
 import Content from './components/Content';
 import CourseStudent from './components/CourseStudent';
+import StudentProfile from './StudentProfile';
 
 const myRouter = createBrowserRouter([
   {path:'/login',Component:Login},
@@ -22,7 +23,7 @@ const myRouter = createBrowserRouter([
     {path:'course-detail/:id',Component:CourseDetails},
     {path:'content/:id',Component:Content},
     {path:'student-list/:id',Component:CourseStudent},
-    // {path:'student-profile/:studentId',Component:CourseStudent}
+    {path:'student-profile/:studentId',Component:StudentProfile}
     
    
   ]}

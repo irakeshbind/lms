@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 
 const CourseStudent = () => {
-    const navigate = useNavigate();
+   const navigate = useNavigate();
     const studentlist = [
         {
 
@@ -88,12 +88,12 @@ const CourseStudent = () => {
                         {
                             studentlist.map((student) => {
                                 return (
-                                    <tr key={student.id}>
+                                    <tr key={student.id} >
                                         <td><img alt="logo" src={student.profilePic} /></td>
                                         <td>{student.fullName}</td>
                                         <td>{student.email}</td>
                                         <td>{student.phone}</td>
-                                        <td><button onClick={()=>{navigate('/dashboard/student-profile/'+ student.id)}}>View  Profile</button></td>
+                                        <td><button onClick={()=>{navigate('/dashboard/student-profile/'+student.id)}} >View  Profile</button></td>
                                         <td><button>Edit</button></td>
                                         <td><button>Delete</button></td>
 
