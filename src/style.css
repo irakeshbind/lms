@@ -584,6 +584,8 @@ thead{
 }
 .header div img{
     width: 100px;
+    height: 100x;
+    /* background-color: red; */
 }
 .box-1,.box-2,.box-3{
     display: flex;
@@ -593,10 +595,50 @@ thead{
     align-items: center;
     gap: 20px;
     padding: 10px;
+    /* border-left: 5px solid royalblue */
 
 }
 .sp-home
 {
     display: flex;
     flex-direction: column;
+}
+.box-1{
+    background-color: rgb(239, 91, 5);
+    color:white
+}
+.box-2{
+    background-color: white;
+}
+.box-3{
+    background-color:rgb(90, 155, 90) ;
+    color:white;
+}
+.seond-row{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+}
+.graph-box{
+    width: 60%;
+    height: 70vh;
+    background-color: white;
+}
+.recent-box{ 
+      width: 40%;
+      /* background-color: white; */
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+}
+.r-student-box{
+    height: 34vh;
+    background-color: white;
+}
+.r-course-box{
+    height: 34vh;
+    background-color: white;
+
 }
