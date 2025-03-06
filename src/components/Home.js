@@ -1,5 +1,6 @@
+import React from 'react'
 import { useEffect, useState } from 'react'
-import { Chart } from 'chart.js'
+import { Chart, plugins } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import{
     Chart as Chartjs,
@@ -10,46 +11,37 @@ import{
     Tooltip,
     Legend,
 } from 'chart.js'
-import { data } from 'react-router-dom';
-Chartjs.register(CategoryScale,LinearScale,BarElement,Title,Tooltip,Legend);
+
+Chartjs.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 const Home = () => {
+  
     const data ={
-        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         datasets: [
             {
-            labels: 'Sales',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: 'rgba(54,162,235,0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            label: 'rakesh',
+            data: [1200, 19000, 30000, 50000, 20000, 37000,78000,45000,56000,17000,25000,80000],
+            backgroundColor: 'rgba(187, 11, 26, 0.2)',
+            borderColor: 'rgb(236, 24, 208)',
             borderWidth: 1,
         },
         ],
     };
+    // chart option
     const options ={
-        
-    }
-    useEffect(()=>{
-        const ctx = document.getElementById('graph-box');
-
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-    },[])
+         responsive: true,
+         plugins:{
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Monthaly Sales Data',
+            },
+         },
+    };
+    
+    
     return (
         <div className="home-wrapper">
             <div className="header">
@@ -79,7 +71,7 @@ const Home = () => {
             </div>
             <div className='seond-row'>
                  <div className='graph-box' id='graph-box'>
-                          graph
+                       <Bar data={data} options={options}/>
                  </div>
                  <div className='recent-box'>
                     <div className='r-student-box'>
