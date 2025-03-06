@@ -643,3 +643,17 @@ thead{
     background-color: white;
 
 }
+
+
+.recent-box-table{
+    width: 100%;
+    
+    
+    
+}
+.recent-box-table img{
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     
+}
