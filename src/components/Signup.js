@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 
 function Signup() {
   const [fullName, setFullName] = useState('');
@@ -13,9 +13,30 @@ function Signup() {
   const [phone, setPhone] = useState('');
   const [profilepic,setProfilePic] = useState(null);
   const [imageUrl,setImageURl] = useState(null);
+  const [isloading,setLoading] = useState(false)
 
   const submitHandler = () => {
-    console.log(fullName, about, qualification, exp, email, password, confirmpassword, phone);
+    setLoading(true)
+    // console.log(fullName, about, qualification, exp, email, password, confirmpassword, phone);
+    const userData = new FormData();
+    userData.append('fullName',fullName)
+    userData.append('email',email)
+    userData.append('aboutUs',about)
+    userData.append('phone',phone)
+    userData.append('password',password)
+    userData.append('experience',exp)
+    userData.append('qualification',qualification)
+    userData.append('logo',profilepic)
+
+    axios.post('http://localhost:4200/auth/admin/signup',userData)
+    .then(res=>{
+      console.log(res);
+      setLoading(false)
+    })
+    .catch(err=>{
+      console.log(err)
+      setLoading(false)
+    })
   }
   
   const fileHandler = (e)=>{
@@ -51,7 +72,7 @@ function Signup() {
             :<img alt='logo' src={imageUrl} />}
           </div>
 
-          <button onClick={submitHandler} className='submit-btn' type='submit'>submit</button>
+          <button onClick={submitHandler} className='submit-btn' type='submit'>{isloading &&   <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>}submit</button>
           <Link to='/login' className='link'>i have already account</Link>
         </div>
 
