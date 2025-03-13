@@ -11,6 +11,7 @@ import CourseDetails from './components/CourseDetails';
 import Content from './components/Content';
 import CourseStudent from './components/CourseStudent';
 import StudentProfile from './StudentProfile';
+import { ToastContainer } from 'react-toastify';
 
 const myRouter = createBrowserRouter([
   {path:'/login',Component:Login},
@@ -35,6 +36,7 @@ function App() {
   return (
    <div>
     <RouterProvider router={myRouter}/>
+    <ToastContainer />
    </div>
   );
 }

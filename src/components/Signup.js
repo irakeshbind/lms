@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 function Signup() {
   const [fullName, setFullName] = useState('');
@@ -15,6 +16,8 @@ function Signup() {
   const [imageUrl,setImageURl] = useState(null);
   const [isloading,setLoading] = useState(false)
 
+  const navigate = useNavigate();
+
   const submitHandler = () => {
     setLoading(true)
     // console.log(fullName, about, qualification, exp, email, password, confirmpassword, phone);
@@ -28,14 +31,19 @@ function Signup() {
     userData.append('qualification',qualification)
     userData.append('logo',profilepic)
 
-    axios.post('http://localhost:4200/auth/admin/signup',userData)
+    axios.post('http://localhost:4200/auth/admin/sinup',userData)
     .then(res=>{
       console.log(res);
+      toast('Account is created')
       setLoading(false)
+      navigate('/login')
+      
     })
     .catch(err=>{
-      console.log(err)
       setLoading(false)
+      toast.error('something is wrong')
+      console.log(err)
+     
     })
   }
   
